@@ -17,7 +17,8 @@ before_install:
   - echo "$DOCKER_PASSWORD" |docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t dineshtailor/react-test -f client/Dockerfile.dev ./client
 script:
-- docker run dineshtailor/react-test npm run test -- --coverage
+  - docker run dineshtailor/react-test npm run test -- --coverage
+
 deploy:
   provider: script
   script: bash ./deploy.sh
