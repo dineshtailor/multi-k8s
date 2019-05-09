@@ -1,3 +1,4 @@
+echo "DINESH_KUMAR BUILDING docker images"
 docker build -t dineshtailor/multi-client:latest -t dineshtailor/multi-client:$SHA -f ./client/Dockerfile ./client
 docker build -t dineshtailor/multi-server:latest -t dineshtailor/multi-server:$SHA -f ./server/Dockerfile ./server
 docker build -t dineshtailor/multi-worker:latest -t dineshtailor/multi-worker:$SHA -f ./worker/Dockerfile ./worker

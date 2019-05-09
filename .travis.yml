@@ -21,6 +21,7 @@ script:
   - docker run dineshtailor/react-test npm test -- --coverage
 
 deploy:
+  - echo "HELLO DINESH"
   provider: script
   script: bash ./deploy.sh
   on:
